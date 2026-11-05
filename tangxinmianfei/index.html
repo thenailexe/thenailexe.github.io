@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>糖心免费版-糖心免费版下载安装_糖心免费版功能与使用要点</title>
+<meta name="description" content="糖心免费版主题首页：说明糖心免费版是什么、适合哪些使用场景，整理下载安装前的准备、主要功能板块与常见问题，帮助访客快速了解糖心免费版并找到入口。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23c2456b'/%3E%3Cpath d='M32 14c7 8 13 12 13 20a13 13 0 0 1-26 0c0-8 6-12 13-20z' fill='%23ffd9e3'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#26171d;
+  --ink-soft:#5c4550;
+  --rose:#c2456b;
+  --rose-deep:#8f2a4b;
+  --rose-soft:#fbe9ee;
+  --cream:#fff9f7;
+  --line:#f0dbe1;
+  --radius:16px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%;}
+a{color:var(--rose-deep);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+/* 页头 */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,249,247,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;color:var(--ink);letter-spacing:.5px;}
+.brand:hover{text-decoration:none;}
+.brand .mark{width:34px;height:34px;flex:0 0 auto;}
+.nav{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center;}
+.nav a{
+  font-size:15px;color:var(--ink-soft);padding:6px 11px;border-radius:999px;
+}
+.nav a:hover{background:var(--rose-soft);color:var(--rose-deep);text-decoration:none;}
+.nav .nav-cta{
+  background:var(--rose);color:#fff;font-weight:600;padding:8px 16px;
+}
+.nav .nav-cta:hover{background:var(--rose-deep);color:#fff;}
+
+/* 首屏 */
+.hero{
+  background:linear-gradient(170deg,#fff2f5 0%,#fff9f7 60%,#fff9f7 100%);
+  border-bottom:1px solid var(--line);
+  padding:54px 0 46px;
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:44px;align-items:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:1px;color:var(--rose-deep);
+  background:#fff;border:1px solid var(--line);
+  padding:5px 13px;border-radius:999px;margin-bottom:18px;
+}
+h1{
+  font-size:clamp(30px,4.4vw,46px);
+  line-height:1.24;margin:0 0 18px;letter-spacing:1px;font-weight:800;
+}
+h1 .accent{color:var(--rose);}
+.hero p.lead{font-size:17px;color:var(--ink-soft);margin:0 0 26px;max-width:38em;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:15.5px;font-weight:600;padding:12px 24px;border-radius:999px;
+  border:1px solid transparent;transition:.18s;
+}
+.btn-primary{background:var(--rose);color:#fff;}
+.btn-primary:hover{background:var(--rose-deep);text-decoration:none;color:#fff;}
+.btn-ghost{background:#fff;color:var(--rose-deep);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--rose);text-decoration:none;background:#fff;}
+.btn[aria-disabled="true"]{opacity:.9;}
+.hero-note{font-size:13.5px;color:#94707e;margin-top:16px;}
+
+.hero-art{
+  background:#fff;border:1px solid var(--line);border-radius:24px;
+  padding:22px;box-shadow:0 18px 40px -28px rgba(143,42,75,.45);
+}
+.hero-art svg{width:100%;height:auto;}
+.hero-art .art-cap{font-size:13px;color:#94707e;text-align:center;margin-top:8px;}
+
+/* 通用区块 */
+section{padding:56px 0;}
+section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{max-width:660px;margin-bottom:34px;}
+.sec-head .tag{font-size:13px;color:var(--rose);font-weight:700;letter-spacing:1.5px;}
+h2{font-size:clamp(22px,2.6vw,28px);margin:8px 0 12px;line-height:1.35;font-weight:800;}
+.sec-head p{margin:0;color:var(--ink-soft);font-size:15.5px;}
+h3{font-size:17.5px;margin:0 0 8px;font-weight:700;}
+
+/* 卡片网格 */
+.grid{display:grid;gap:20px;}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 22px;
+}
+.card p{margin:0;font-size:15px;color:var(--ink-soft);}
+.card .ico{
+  width:40px;height:40px;border-radius:12px;background:var(--rose-soft);
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+}
+.card .ico svg{width:22px;height:22px;}
+
+/* 功能列表 */
+.feature-list{display:grid;gap:14px;grid-template-columns:repeat(2,1fr);}
+.feature{
+  display:flex;gap:14px;background:#fff;border:1px solid var(--line);
+  border-radius:14px;padding:18px 20px;
+}
+.feature .num{
+  flex:0 0 auto;font-weight:800;color:var(--rose);font-size:15px;
+  width:28px;height:28px;border-radius:50%;background:var(--rose-soft);
+  display:flex;align-items:center;justify-content:center;
+}
+.feature div p{margin:4px 0 0;font-size:14.5px;color:var(--ink-soft);}
+
+/* 步骤 */
+.steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(3,1fr);}
+.step{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;position:relative;
+}
+.step::before{
+  counter-increment:s;content:counter(s);
+  font-size:13px;font-weight:800;color:#fff;background:var(--rose);
+  width:26px;height:26px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin-bottom:12px;
+}
+.step p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+
+/* 问答 */
+.faq{display:grid;gap:14px;}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:0 20px;
+}
+details summary{
+  cursor:pointer;list-style:none;font-weight:700;font-size:15.5px;
+  padding:16px 0;display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+details summary::-webkit-details-marker{display:none;}
+details summary::after{content:"+";color:var(--rose);font-size:20px;font-weight:400;line-height:1;}
+details[open] summary::after{content:"–";}
+details .a{padding:0 0 18px;color:var(--ink-soft);font-size:14.8px;margin:0;}
+
+/* 侧栏组合区 */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+.panel{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;
+}
+.panel h3{color:var(--rose-deep);}
+.panel p{font-size:15px;color:var(--ink-soft);margin:0 0 12px;}
+.panel ul{margin:0;padding-left:20px;font-size:14.8px;color:var(--ink-soft);}
+.panel ul li{margin-bottom:7px;}
+.entry-box{
+  background:linear-gradient(160deg,#fff2f5,#fff);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px 24px;
+}
+.entry-box .btn{margin-top:6px;}
+.entry-box .small{font-size:13px;color:#94707e;margin-top:14px;}
+
+/* 页尾 */
+.site-footer{
+  background:#2b1a21;color:#e8d6dc;padding:42px 0 30px;font-size:14.5px;
+}
+.footer-grid{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:flex-start;}
+.site-footer .brand{color:#fff;font-size:17px;margin-bottom:10px;}
+.site-footer a{color:#f0c3d1;}
+.site-footer p{margin:0 0 6px;color:#c7aeb7;}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:4px;}
+.footer-bottom{
+  border-top:1px solid #4a2f38;margin-top:26px;padding-top:18px;
+  font-size:13px;color:#a98c96;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;
+}
+
+@media (max-width:900px){
+  .hero-grid,.split{grid-template-columns:1fr;}
+  .grid-3{grid-template-columns:1fr 1fr;}
+  .steps{grid-template-columns:1fr;}
+  .hero-art{order:-1;}
+  .header-inner{flex-wrap:wrap;padding:10px 0;}
+  .nav{width:100%;overflow-x:auto;}
+}
+@media (max-width:640px){
+  .grid-3,.grid-2,.feature-list{grid-template-columns:1fr;}
+  section{padding:42px 0;}
+  .hero{padding:34px 0 38px;}
+  .nav a{font-size:14px;padding:6px 9px;}
+  h1{font-size:28px;}
+  .hero p.lead{font-size:15.5px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="16" fill="#c2456b"/>
+        <path d="M32 14c7 8 13 12 13 20a13 13 0 0 1-26 0c0-8 6-12 13-20z" fill="#ffd9e3"/>
+      </svg>
+      <span>糖心免费版</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#what">这是什么</a>
+      <a href="#features">功能板块</a>
+      <a href="#install">下载安装</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-cta" href="#entry">获取入口</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">主题首页 · 使用说明与入口</span>
+        <h1>糖心免费版</h1>
+        <p class="lead">糖心免费版是一个免费提供使用的版本形态，本页把它当作一个完整主题来介绍：它面向哪类使用场景、包含哪些功能板块、下载安装前需要准备什么，以及从哪里进入。内容以说明为主，帮助第一次接触糖心免费版的人少走弯路。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#features">查看功能板块</a>
+          <a class="btn btn-ghost" href="#install">下载安装说明</a>
+        </div>
+        <p class="hero-note">本页为介绍性首页，具体可用功能与版本状态以实际页面呈现为准。</p>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 320 240" role="img" aria-label="糖心免费版主题插画：糖果爱心与界面卡片">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffd9e3"/>
+              <stop offset="1" stop-color="#f6b7c8"/>
+            </linearGradient>
+          </defs>
+          <rect x="18" y="26" width="284" height="188" rx="20" fill="#fff" stroke="#f0dbe1"/>
+          <rect x="40" y="48" width="120" height="10" rx="5" fill="#f6c9d5"/>
+          <rect x="40" y="68" width="86" height="8" rx="4" fill="#f3e0e5"/>
+          <rect x="40" y="150" width="120" height="44" rx="12" fill="#fbe9ee"/>
+          <rect x="52" y="164" width="60" height="7" rx="3.5" fill="#e8a5b7"/>
+          <rect x="52" y="176" width="88" height="6" rx="3" fill="#f0cdd7"/>
+          <g transform="translate(196,96)">
+            <path d="M0 22C0 6 12 0 22 0s22 6 22 22c0 18-22 32-22 32S0 40 0 22z" fill="url(#g1)"/>
+            <path d="M10 20c0-6 5-9 12-9s12 3 12 9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+          </g>
+          <circle cx="252" cy="60" r="7" fill="#f6b7c8"/>
+          <circle cx="62" cy="120" r="5" fill="#f6c9d5"/>
+        </svg>
+        <p class="art-cap">主题示意 · 界面卡片与爱心标识</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 这是什么 -->
+  <section id="what">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">定位说明</span>
+        <h2>糖心免费版是什么，适合谁</h2>
+        <p>先把概念说清楚，再谈怎么用。糖心免费版的核心信息集中在“免费使用”这件事上，其余内容围绕它展开。</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c2456b" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3>免费形态</h3>
+          <p>糖心免费版以免费使用为主要特征，适合想先体验再决定是否长期使用的人。它不是一个单独的付费套餐，而是同主题下更轻量的入门选择。</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c2456b" stroke-width="2" stroke-linecap="round"><path d="M4 19V8l8-4 8 4v11"/><path d="M9 19v-6h6v6"/></svg>
+          </div>
+          <h3>常见使用场景</h3>
+          <p>日常浏览、内容查看与基础操作是主要场景。对功能深度要求不高的访客，用糖心免费版完成常规需求已经够用。</p>
+        </div>
+        <div class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c2456b" stroke-width="2" stroke-linecap="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+          </div>
+          <h3>与完整版的差别</h3>
+          <p>免费版通常在功能范围或使用次数上做取舍，换取更低的进入门槛。具体差异以实际页面列出的范围为准，建议先按需了解再选择。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 功能板块 -->
+  <section class="alt" id="features">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">内容结构</span>
+        <h2>糖心免费版的功能板块与使用要点</h2>
+        <p>把页面拆成几块来看会更清楚：入口、内容区、个人设置与更新提示，各自承担不同任务。</p>
+      </div>
+      <div class="feature-list">
+        <div class="feature">
+          <span class="num">1</span>
+          <div>
+            <h3>首页入口区</h3>
+            <p>打开糖心免费版后最先看到的是入口与推荐位，主要功能通常在这里集中呈现，方便一次点到位。</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="num">2</span>
+          <div>
+            <h3>内容浏览区</h3>
+            <p>分类、列表与详情构成浏览主线，糖心免费版在这一块保持简洁，减少了层层跳转的负担。</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="num">3</span>
+          <div>
+            <h3>个人设置</h3>
+            <p>账号信息、偏好与常用选项集中管理，使用糖心免费版时可以先在这里完成基础配置。</p>
+          </div>
+        </div>
+        <div class="feature">
+          <span class="num">4</span>
+          <div>
+            <h3>更新与提示</h3>
+            <p>版本更新、公告与状态提示会以显眼方式出现，便于及时了解糖心免费版的当前状态。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载安装 -->
+  <section id="install">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">操作路径</span>
+        <h2>下载糖心免费版前的准备与步骤</h2>
+        <p>按顺序走一遍，能减少安装过程中反复排查的时间。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>确认环境</h3>
+          <p>先核对设备系统版本与存储空间是否满足要求，网络保持稳定，避免下载中途中断。</p>
+        </div>
+        <div class="step">
+          <h3>获取安装包</h3>
+          <p>通过本页入口区域获取糖心免费版的安装文件，注意核对来源，不要使用来路不明的镜像。</p>
+        </div>
+        <div class="step">
+          <h3>安装并首次打开</h3>
+          <p>安装完成后首次启动，按提示完成基础设置，再进入功能板块逐项体验糖心免费版。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 组合区：价值 + 入口 -->
+  <section class="alt" id="entry">
+    <div class="wrap split">
+      <div class="panel">
+        <h3>为什么有人选择糖心免费版</h3>
+        <p>理由大多不复杂，集中在门槛、上手与可预期性三点上。</p>
+        <ul>
+          <li>免费进入，先体验再决定，不必一开始就承担成本。</li>
+          <li>功能布局直白，新用户几乎不需要学习期。</li>
+          <li>基础需求覆盖完整，日常使用不依赖额外配置。</li>
+          <li>版本状态公开提示，便于判断是否适合长期使用。</li>
+        </ul>
+      </div>
+      <div class="entry-box">
+        <h3>获取糖心免费版</h3>
+        <p>入口区域集中放置下载与说明链接。下载按钮保留在主题首页中，具体地址后续替换，当前仅作占位展示。</p>
+        <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none;">下载</a>
+        <p class="small">下载入口尚未启用，请以正式发布页面为准；本页不承诺具体版本号与更新日期。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 问答 -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">常见问题</span>
+        <h2>关于糖心免费版的常见疑问</h2>
+        <p>问题集中在来源、费用与功能范围，下面逐条说明。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>糖心免费版真的免费吗？</summary>
+          <p class="a">糖心免费版以免费使用为主要定位，基础功能属于免费范围。是否包含需要额外条件的部分，以实际页面列出的功能说明为准，本页不做扩大承诺。</p>
+        </details>
+        <details>
+          <summary>从哪里下载糖心免费版比较稳妥？</summary>
+          <p class="a">优先使用本页入口区域给出的地址，并核对文件来源。第三方站点提供的安装包无法保证与官方一致，建议不要使用。</p>
+        </details>
+        <details>
+          <summary>糖心免费版和完整版能同时使用吗？</summary>
+          <p class="a">通常可以各自独立使用，但账号与数据是否互通取决于实际配置。切换前建议先在设置中确认同步方式，避免重复操作。</p>
+        </details>
+        <details>
+          <summary>使用糖心免费版需要注意什么？</summary>
+          <p class="a">留意更新提示与公告，保持系统与网络环境正常；遇到功能限制，先查看说明是否属于免费版的范围，再判断是设置问题还是版本差异。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true" width="30" height="30">
+            <rect width="64" height="64" rx="16" fill="#c2456b"/>
+            <path d="M32 14c7 8 13 12 13 20a13 13 0 0 1-26 0c0-8 6-12 13-20z" fill="#ffd9e3"/>
+          </svg>
+          <span>糖心免费版</span>
+        </div>
+        <p>糖心免费版主题首页，围绕免费版本的使用说明、功能板块与入口展开。</p>
+      </div>
+      <div>
+        <p>页面导航</p>
+        <div class="footer-links">
+          <a href="#what">定位说明</a>
+          <a href="#features">功能板块</a>
+          <a href="#install">下载安装</a>
+          <a href="#faq">常见问题</a>
+          <a href="#entry">获取入口</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>本页内容为介绍性说明，功能范围与版本状态以实际页面为准。</span>
+      <span>糖心免费版 · 主题首页</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
