@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寸止调教-寸止调教入门方法_寸止调教节奏控制与训练要点</title>
+<meta name="description" content="寸止调教主题首页：介绍寸止调教的基本概念、节奏控制方法、训练阶段安排与沟通原则，帮助你理解寸止调教中收放节奏、呼吸配合与安全边界，并给出可执行的练习路径。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b1d2f'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23e8b04b' stroke-width='4'/%3E%3Cpath d='M32 15v9M32 40v9M15 32h9M40 32h9' stroke='%23e8b04b' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#221a24;
+  --ink-2:#4a3c4d;
+  --muted:#7d6f80;
+  --bg:#fbf7f2;
+  --panel:#ffffff;
+  --line:#e8dfd6;
+  --gold:#b9822c;
+  --gold-soft:#f2e3c8;
+  --plum:#4a2b4e;
+  --plum-soft:#efe6f1;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC","Source Han Serif SC","PingFang SC","Microsoft YaHei",serif;
+  line-height:1.85;
+  font-size:16.5px;
+}
+img,svg{max-width:100%}
+a{color:var(--plum);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* header */
+header.site{
+  position:sticky;top:0;z-index:20;
+  background:rgba(251,247,242,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px 0;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand .mark{flex:0 0 auto;width:38px;height:38px}
+.brand .name{
+  font-size:1.18rem;font-weight:700;letter-spacing:.06em;
+  color:var(--plum);white-space:nowrap;
+}
+nav.main{display:flex;gap:18px;flex-wrap:wrap;font-size:.94rem}
+nav.main a{color:var(--ink-2);padding:2px 0;border-bottom:2px solid transparent}
+nav.main a:hover{border-bottom-color:var(--gold);text-decoration:none}
+nav.main a.cta{
+  color:#fff;background:var(--plum);border-radius:999px;
+  padding:6px 16px;border-bottom:none;
+}
+nav.main a.cta:hover{background:#3a2040;text-decoration:none}
+
+/* hero */
+.hero{padding:52px 0 40px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.82rem;letter-spacing:.16em;color:var(--gold);
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+  margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
+h1{
+  font-size:clamp(2rem,5.2vw,3rem);
+  line-height:1.25;margin:0 0 18px;letter-spacing:.04em;
+  color:var(--plum);
+}
+.hero p.lead{font-size:1.06rem;color:var(--ink-2);margin:0 0 26px;max-width:34em}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:11px 24px;border-radius:999px;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-size:.95rem;
+  border:1px solid transparent;transition:.18s ease;
+}
+.btn-primary{background:var(--plum);color:#fff}
+.btn-primary:hover{background:#3a2040;text-decoration:none}
+.btn-ghost{border-color:var(--plum);color:var(--plum);background:transparent}
+.btn-ghost:hover{background:var(--plum-soft);text-decoration:none}
+.hero-figure{
+  background:var(--panel);border:1px solid var(--line);border-radius:22px;
+  padding:26px;box-shadow:0 18px 40px -30px rgba(74,43,78,.55);
+}
+.hero-figure figcaption{
+  margin-top:14px;font-size:.82rem;color:var(--muted);
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;text-align:center;
+}
+
+/* section basics */
+section{padding:44px 0}
+.sec-head{margin-bottom:26px}
+.sec-head h2{
+  font-size:clamp(1.35rem,2.6vw,1.72rem);
+  margin:0 0 8px;color:var(--plum);letter-spacing:.03em;
+}
+.sec-head p{margin:0;color:var(--muted);font-size:.95rem;max-width:46em}
+.divider{height:1px;background:var(--line);border:0;margin:0}
+
+/* concept cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 22px;
+}
+.card h3{margin:14px 0 8px;font-size:1.06rem;color:var(--plum)}
+.card p{margin:0;font-size:.94rem;color:var(--ink-2)}
+.card .ico{width:34px;height:34px;display:block}
+
+/* stages */
+.stages{background:var(--plum-soft);border-radius:22px;padding:34px 30px}
+.stage-list{display:grid;gap:0;margin:0;padding:0;list-style:none;counter-reset:st}
+.stage-list li{
+  counter-increment:st;display:grid;grid-template-columns:52px 1fr;
+  gap:18px;padding:18px 0;border-bottom:1px dashed #d8c9dc;
+}
+.stage-list li:last-child{border-bottom:0;padding-bottom:0}
+.stage-list li::before{
+  content:counter(st,decimal-leading-zero);
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:1.1rem;font-weight:700;color:var(--gold);
+  line-height:1.5;
+}
+.stage-list h3{margin:0 0 4px;font-size:1.02rem;color:var(--plum)}
+.stage-list p{margin:0;font-size:.94rem;color:var(--ink-2)}
+
+/* two columns */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.panel{
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius);padding:26px 24px;
+}
+.panel h3{margin:0 0 12px;font-size:1.1rem;color:var(--plum)}
+.panel ul{margin:0;padding-left:1.15em}
+.panel li{margin-bottom:10px;font-size:.95rem;color:var(--ink-2)}
+.panel li:last-child{margin-bottom:0}
+.panel li strong{color:var(--ink)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.check li{
+  display:grid;grid-template-columns:22px 1fr;gap:12px;
+  font-size:.95rem;color:var(--ink-2);
+}
+.check .dot{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--gold-soft);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.78rem;font-weight:700;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+}
+
+/* note */
+.note{
+  background:#fff;border-left:4px solid var(--gold);
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:20px 24px;font-size:.95rem;color:var(--ink-2);
+}
+.note strong{color:var(--ink)}
+
+/* download */
+.dl-box{
+  background:var(--ink);color:#f4ece4;border-radius:22px;
+  padding:36px 32px;display:grid;grid-template-columns:1fr auto;
+  gap:26px;align-items:center;
+}
+.dl-box h2{margin:0 0 10px;font-size:1.4rem;color:#fff}
+.dl-box p{margin:0;font-size:.94rem;color:#c9bccb;max-width:40em}
+.btn-disabled{
+  display:inline-block;padding:12px 30px;border-radius:999px;
+  background:var(--gold);color:#2b1d2f;font-weight:700;
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-size:.95rem;
+  pointer-events:none;cursor:default;white-space:nowrap;
+}
+
+/* footer */
+footer.site{
+  border-top:1px solid var(--line);padding:30px 0 40px;
+  font-size:.86rem;color:var(--muted);
+  font-family:"PingFang SC","Microsoft YaHei",sans-serif;
+}
+.foot-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot-brand{display:flex;align-items:center;gap:9px;color:var(--plum);font-weight:700}
+.foot-brand svg{width:24px;height:24px}
+footer.site a{color:var(--ink-2)}
+
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .hero{padding:36px 0 26px}
+  .cards{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .dl-box{grid-template-columns:1fr;padding:28px 22px}
+  .stages{padding:26px 20px}
+  nav.main{gap:14px;font-size:.9rem}
+  .brand .name{font-size:1.06rem}
+  section{padding:34px 0}
+}
+@media (max-width:480px){
+  body{font-size:16px}
+  .head-inner{padding:10px 0}
+  nav.main a.cta{padding:5px 13px}
+  .stage-list li{grid-template-columns:40px 1fr;gap:12px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#221a24"/>
+        <circle cx="32" cy="32" r="17" fill="none" stroke="#e8b04b" stroke-width="4"/>
+        <path d="M32 15v9M32 40v9M15 32h9M40 32h9" stroke="#e8b04b" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <span class="name">寸止调教</span>
+    </div>
+    <nav class="main" aria-label="主导航">
+      <a href="#concept">概念</a>
+      <a href="#stages">节奏</a>
+      <a href="#method">方法</a>
+      <a href="#safety">安全</a>
+      <a href="#download">下载</a>
+      <a href="#method" class="cta">从方法开始</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">节奏 · 控制 · 沟通</span>
+        <h1>寸止调教</h1>
+        <p class="lead">寸止调教关注的是“收”与“放”之间的节奏：在接近临界点时暂停，让身体回到平稳，再进入下一轮。这份首页把寸止调教的基本概念、阶段安排、呼吸配合与安全边界整理成可执行的路径，供入门者按步骤阅读。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#stages">了解节奏安排</a>
+          <a class="btn btn-ghost" href="#safety">先看安全原则</a>
+        </div>
+      </div>
+      <figure class="hero-figure" style="margin:0">
+        <svg viewBox="0 0 320 240" role="img" aria-label="寸止调教的节奏示意图：一条起伏并多次暂停的曲线">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#efe6f1"/>
+              <stop offset="1" stop-color="#fbf7f2"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="320" height="240" rx="16" fill="url(#g1)"/>
+          <line x1="30" y1="200" x2="290" y2="200" stroke="#d8c9dc" stroke-width="1.5"/>
+          <line x1="30" y1="40" x2="30" y2="200" stroke="#d8c9dc" stroke-width="1.5"/>
+          <path d="M30 190 C70 190 76 90 100 88 C118 86 120 150 140 150 C160 150 164 60 188 58 C206 56 208 130 228 130 C248 130 252 78 290 76"
+                fill="none" stroke="#4a2b4e" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="100" cy="88" r="5" fill="#b9822c"/>
+          <circle cx="188" cy="58" r="5" fill="#b9822c"/>
+          <circle cx="290" cy="76" r="5" fill="#b9822c"/>
+          <text x="104" y="76" font-size="11" fill="#7d6f80" font-family="sans-serif">暂停</text>
+          <text x="192" y="46" font-size="11" fill="#7d6f80" font-family="sans-serif">暂停</text>
+          <text x="36" y="30" font-size="11" fill="#7d6f80" font-family="sans-serif">强度</text>
+        </svg>
+        <figcaption>寸止调教的核心不是一次到顶，而是反复回到可控区间的过程。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section id="concept">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>寸止调教在讲什么</h2>
+        <p>先把概念说清楚，再谈练习。寸止调教的三个关键词是临界、暂停与恢复，理解它们就能判断自己是否在正确的节奏里。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <svg class="ico" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="13" fill="none" stroke="#b9822c" stroke-width="2.5"/><circle cx="17" cy="17" r="5" fill="#b9822c"/></svg>
+          <h3>临界点识别</h3>
+          <p>寸止调教的前提是能提前感知身体接近临界的状态。呼吸变浅、肌肉发紧、注意力收窄，都是需要放慢的信号。</p>
+        </article>
+        <article class="card">
+          <svg class="ico" viewBox="0 0 34 34" aria-hidden="true"><rect x="10" y="8" width="6" height="18" rx="2" fill="#4a2b4e"/><rect x="19" y="8" width="6" height="18" rx="2" fill="#b9822c"/></svg>
+          <h3>暂停与恢复</h3>
+          <p>暂停不是中断，而是让节奏回落的动作。寸止调教通常要求停手后保持静止与均匀呼吸，等身体回到平稳再继续。</p>
+        </article>
+        <article class="card">
+          <svg class="ico" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 6l3.4 7.2 7.6 1-5.6 5.4 1.4 7.6L17 23.6 10.2 27.2l1.4-7.6L6 14.2l7.6-1z" fill="none" stroke="#b9822c" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          <h3>双方共识</h3>
+          <p>寸止调教是双向的练习，暂停信号、强度上限与结束方式都应在开始前说清楚，任何一方都可以随时喊停。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="stages">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>寸止调教的阶段安排</h2>
+        <p>把一次完整的寸止调教拆成四个阶段，每个阶段有独立的观察重点，避免把注意力全部压在“忍”上。</p>
+      </div>
+      <div class="stages">
+        <ol class="stage-list">
+          <li>
+            <div>
+              <h3>准备：设定边界</h3>
+              <p>确认可用时长、强度上限和中止方式。寸止调教的第一步不是加速，而是把“停”的规则先定好。</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>升温：建立感知</h3>
+              <p>以较慢的节奏进入，留意呼吸与肌肉的变化。此阶段的目标是熟悉信号，而不是追求强度。</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>寸止：多次暂停</h3>
+              <p>接近临界时停下，保持静止三十秒到一分钟，让身体回落。寸止调教的质量取决于暂停是否彻底。</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>收束：恢复与复盘</h3>
+              <p>结束后放慢节奏，补充水分，简单记录本次节奏与感受，为下一次寸止调教提供参照。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="method">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>可执行的练习方法</h2>
+        <p>方法分为身体与控制两条线，交替练习比单次拉长更有效。下面两组要点可以按顺序尝试。</p>
+      </div>
+      <div class="two">
+        <div class="panel">
+          <h3>身体层面</h3>
+          <ul>
+            <li><strong>呼吸先行：</strong>暂停时用鼻吸口呼，把呼气拉长到吸气的两倍，帮助心率回落。</li>
+            <li><strong>放松肩颈：</strong>寸止调教中容易不自觉耸肩，暂停时主动下沉肩胛，减少多余紧张。</li>
+            <li><strong>控制时长：</strong>单轮暂停不必过长，宁可多轮短停，也不要在一次暂停里硬撑。</li>
+            <li><strong>留意信号：</strong>头晕、发麻或明显不适时应立即结束，而非继续寸止调教。</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>节奏与控制</h3>
+          <ul>
+            <li><strong>固定间隔：</strong>先按固定时间暂停，形成可预期的节奏，再考虑变化。</li>
+            <li><strong>逐步推进：</strong>每轮只比上一轮略微推进一步，避免一次性拉高。</li>
+            <li><strong>记录反馈：</strong>用简短笔记记下暂停次数与恢复速度，是寸止调教进步的直接依据。</li>
+            <li><strong>留出余量：</strong>始终保留一分力气，让结束由自己决定。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>安全与沟通清单</h2>
+        <p>寸止调教属于需要自律的练习，下面几条是开始前的固定检查项，建议逐条确认。</p>
+      </div>
+      <div class="two">
+        <div class="panel">
+          <ul class="check">
+            <li><span class="dot">1</span><span>提前约定暂停词与结束方式，双方都能无负担地使用。</span></li>
+            <li><span class="dot">2</span><span>不在疲劳、饮酒或身体不适时进行寸止调教。</span></li>
+            <li><span class="dot">3</span><span>把时长控制在可承受范围内，宁短勿长。</span></li>
+            <li><span class="dot">4</span><span>过程中出现持续不适，立即停止并休息。</span></li>
+          </ul>
+        </div>
+        <div class="note">
+          <strong>关于分寸：</strong>寸止调教的价值在于训练对节奏的感知与自控，而不是比拼忍耐极限。任何以强度为唯一目标的做法，都会偏离这项练习的初衷。把每一次暂停当成观察身体的机会，进步会更稳定。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <div class="dl-box">
+        <div>
+          <h2>下载寸止调教练习卡</h2>
+          <p>包含四阶段节奏表、暂停时间记录栏与安全清单，可打印后随练习使用。文件正在整理中，开放后可直接获取。</p>
+        </div>
+        <a class="btn-disabled" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见问题</h2>
+      </div>
+      <div class="two">
+        <div class="panel">
+          <h3>需要多久才能掌握节奏？</h3>
+          <p>没有统一答案。多数人需要经过若干次练习，才能较准确地判断临界位置。寸止调教更看重每次的观察质量，而不是次数本身。</p>
+        </div>
+        <div class="panel">
+          <h3>暂停时间越长越好吗？</h3>
+          <p>不是。暂停的作用是让身体回落，时间以恢复平稳为准。过长的暂停反而会打断节奏感，让寸止调教变得机械。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#4a2b4e"/>
+        <circle cx="32" cy="32" r="17" fill="none" stroke="#e8b04b" stroke-width="4"/>
+        <path d="M32 15v9M32 40v9M15 32h9M40 32h9" stroke="#e8b04b" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <span>寸止调教</span>
+    </div>
+    <div>主题：节奏控制与练习方法 · 内容仅供学习参考，请以自身感受为准</div>
+    <div><a href="#concept">概念</a> · <a href="#method">方法</a> · <a href="#safety">安全</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
